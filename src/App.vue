@@ -1,32 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <Header class="header_box"/>
+    <!--特使的  配合路由使用的标签  实际运行时  会根据路由替换成对应的组件  -->
+    <router-view />
+    <Footer class="footer"/>
   </div>
 </template>
+<script>
+import Header from "./components/Header"
+import Footer from './components/Footer'
+export default {
+  // 
+  components:{
+    Header,
+    Footer,
+  }
+}
+</script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  @import './assets/css/common.css';
+  @import './assets/css/mycss.css';
 </style>
